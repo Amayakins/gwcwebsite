@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="practice.css"
+
+    </head>
+    <body>
+    <button class="tablink" onclick="openPage('About', this, 'pink')"id="defaultOpen">About</button>
+    <button class="tablink" onclick="openPage('Favs', this, 'lightblue')">Favs</button>
+    <button class="tablink" onclick="openPage('Fun', this, 'lightyellow')">Fun</button>
+    <button class="tablink" onclick="openPage('Recommendations', this, 'lavender')">Recommendations</button>
+
+    <div id="About" class="tabcontent">
+      <font face="Comic Sans MS" size=7>
+      <h3>About</h3>
+      <p><center><img src="cute.jpg"</center>
+        <center><b> All About Amaya </b></center>
+      <br>
+      My name is Amaya and I am 16 years old. I am in 11th grade and I go to Elmont Memorial High School.
+      I am currently interested and learning all about Computer Science. I am currently in a program called
+      Girls Who Code.
+      <br>
+</p>
+    </div>
+
+    <div id="Favs" class="tabcontent">
+      <h3>Favs</h3>
+      <p><font face="Comic Sans MS" size=7>
+        Here are some of my favorite things!
+        <center><img src="pasta.jpeg"</center>
+        <br>
+        <center> I LOVEEEEE Pasta!!!! Especially alfredo</center>
+        <br>
+        <center><img src="candy.jpeg"</center>
+        <br>
+        <center> I also have an obsession with candy </center>
+        <br>
+        <center><img src="sleep.jpg"</center>
+        <br>
+        <center> I love to sleepppppp</center>
+
+      </p>
+    </div>
+
+    <div id="Fun" class="tabcontent">
+      <h3>Fun Facts</h3>
+      <p><font face="Comic Sans MS" size=7>
+        I guess ill just say some fun facts about myself!
+        <br>
+        <center> 1. My second favorite color is pink</center>
+        <br>
+        <center> 2. I have an odd obsession with Dance Moms </center>
+        <br>
+        <center> 3. My least favorite class in school is algebra 2 </center>
+        <br>
+        <center> 4. My friend said that I am very observant
+
+      </p>
+    </div>
+
+    <div id="Recommendations" class="tabcontent">
+      <h3>My Random Recommendations</h3>
+      <p><font face="Comic Sans MS" size=7>
+        <center><img src="euphoria.jpg"</center>
+        <br>
+        <center> You guys should watch euphoria... Its amazing</center>
+        <br>
+
+      </p>
+    </div>
+
+
+    <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+  </head>
+  <body>
+
+
+
+  </body>
+
+</html>
